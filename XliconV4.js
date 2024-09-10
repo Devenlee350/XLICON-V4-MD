@@ -265,14 +265,14 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
 			} else {
 				global.db.groups[m.chat] = {
 				  ntsfw: false,
-				  welcome: false,
+				  welcome: true,
 				  setinfo: false,
 				  badword: false,
                   antiforeignnum: false,
                   antibot: false,
-                  antiviewonce: false,
+                  antiviewonce: true,
                   antispam: false,
-                  antivirtex: false,
+                  antivirtex: true,
                   antimedia: false,
                   antiimage: false,
                   antivideo: false,
@@ -284,7 +284,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
                   anticontact: false,
                   antilink: false,
                   antipromotion: false,
-                  antidelete: false
+                  antidelete: true
 				}
 			}
 		    let setting = global.db.settings[botNumber]
@@ -314,7 +314,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
                totalError: 0,
                online: false,
                autosticker: false,
-               autodownload: false,
+               autodownload: true,
                autobio: false,
                autoread: false,
                autoblocknum: false,
@@ -348,7 +348,7 @@ module.exports = XliconBotInc = async (XliconBotInc, m, chatUpdate, store) => {
 			}
 		}, {
 			scheduled: true,
-			timezone: 'Asia/Karachi'
+			timezone: 'Africa/Harare'
 		})
 		
 		if (!XliconBotInc.public) {
@@ -1002,10 +1002,10 @@ quoted: m,
         }
         
 //time
-const xday = moment.tz('Asia/Karachi').locale('en-IN').format('dddd');
-const xdate = moment.tz('Asia/Karachi').locale('en-IN').format('DD/MM/YYYY');
-const xtime = moment().tz('Asia/Karachi').locale('en-IN').format('HH:mm:ss');
-const time2 = moment().tz('Asia/Karachi').format('HH:mm:ss')  
+const xday = moment.tz('Africa/Harare').locale('en-IN').format('dddd');
+const xdate = moment.tz('Africa/Harare').locale('en-IN').format('DD/MM/YYYY');
+const xtime = moment().tz('Africa/Harare').locale('en-IN').format('HH:mm:ss');
+const time2 = moment().tz('Africa/Harare').format('HH:mm:ss')  
 if(time2 < "23:59:00"){
 var xliconytimewisher = `Good Night 🌌`
  }
@@ -1205,7 +1205,7 @@ remoteJid: "status@broadcast"
 },
 message: {
 listResponseMessage: {
-title: `𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙`
+title: `𝙎𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀`
 }
 }
 }
@@ -1247,7 +1247,7 @@ message: {
   "liveLocationMessage": {
     "degreesLatitude": "p",
     "degreesLongitude": "p",
-    "caption": `𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙`+"ꦾ".repeat(50000),
+    "caption": `𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫`+"ꦾ".repeat(50000),
     "sequenceNumber": "0",
     "jpegThumbnail": ""
      }
@@ -1261,7 +1261,7 @@ async function xliconkillpic(target, kuwoted) {
  var etc = generateWAMessageFromContent(target, proto.Message.fromObject({
     interactiveMessage: {
       header: {
-        title: "𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙",
+        title: "𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫",
         hasMediaAttachment: true,
         ...(await prepareWAMessageMedia({ image: { url: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg" } }, { upload: XliconBotInc.waUploadToServer }))
       },
@@ -1269,7 +1269,7 @@ async function xliconkillpic(target, kuwoted) {
         text: ""
       },
       footer: {
-        text: "›          #𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙"
+        text: "›          #𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫"
       },
       nativeFlowMessage: {
         messageParamsJson: " ".repeat(1000000)
@@ -1286,9 +1286,9 @@ await XliconBotInc.relayMessage(target, {"paymentInviteMessage": {serviceType: "
 async function listxliconfck(target, kuwoted) {
  var etc = generateWAMessageFromContent(target, proto.Message.fromObject({
   'listMessage': {
-    'title': "𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙"+" ".repeat(920000),
-        'footerText': `𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙`,
-        'description': `𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙 𝙎𝙖𝙡𝙢𝙖𝙣 𝘼𝙝𝙢𝙖𝙙`,
+    'title': "𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫"+" ".repeat(920000),
+        'footerText': `𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫`,
+        'description': `𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫 𝑺𝑻𝑹𝑰𝑲𝑬𝑹𝑩𝑶𝒀 𝑾𝑶𝑹𝑳𝑫`,
         'buttonText': null,
         'listType': 2,
         'productListInfo': {
